@@ -10,10 +10,15 @@ public class CardObject : MonoBehaviour
     [SerializeField] protected Image[] icons;
     [SerializeField] protected CanvasGroup canvasGroup;
 
-    protected Vector3 startScale;
+    public int IconCount => icons.Length;
 
-    private void Awake() {
+    protected Vector3 startScale;
+    protected Vector3 startPos;
+
+    private void Awake()
+    {
         startScale = transform.localScale;
+        startPos = transform.position;
     }
 
     public void ShowCard()
@@ -53,4 +58,41 @@ public class CardObject : MonoBehaviour
             icons[i].gameObject.SetActive(index == i);
         }
     }
+
+    public void PlayFocusAnim()
+    {
+        StartCoroutine(AnimationCoroutine());
+    }
+
+    IEnumerator AnimationCoroutine()
+    {
+        // Clear any active animations
+        yield return new WaitForSeconds(0.5f);
+        transform.DOKill();
+
+        Sequence seq = DOTween.Sequence();
+        Sequence seq2 = DOTween.Sequence();
+
+        // Scale up and down
+        seq.Append(transform.DOScale(startScale * 1.25f, 0.5f).SetEase(Ease.Linear))
+           .Append(transform.DOScale(startScale, 0.5f).SetEase(Ease.Linear))
+           .SetLoops(-1, LoopType.Yoyo); // -1 for infinite loop
+
+        // Move up and down
+        float delta = 50f;
+        /* seq2.Append(transform.DOMoveY(startPos.y + delta, 0.25f).SetEase(Ease.Linear))
+           .Append(transform.DOMoveY(startPos.y, 0.25f).SetEase(Ease.Linear))
+           .Append(transform.DOMoveY(startPos.y - delta, 0.25f).SetEase(Ease.Linear))
+           .Append(transform.DOMoveY(startPos.y, 0.25f).SetEase(Ease.Linear))
+           .SetLoops(-1, LoopType.Yoyo); // -1 for infinite loop */
+
+        yield return new WaitForSeconds(5f);
+
+        // Stop the animations after 5 seconds
+        seq.Kill();
+
+        ScaleNormal();
+        transform.DOMoveY(startPos.y, 0.2f);
+    }
+
 }
