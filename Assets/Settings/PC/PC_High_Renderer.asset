@@ -15,18 +15,20 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: FullscreenMask
-    Event: 450
+    Event: 300
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 1536
-      PassNames: []
+        m_Bits: 4294967295
+      PassNames:
+      - Outline
+      - Silhouette
     overrideMaterial: {fileID: 2100000, guid: 725a070d0d3a84543b62d9387002f061, type: 2}
     overrideMaterialPassIndex: 0
     overrideShader: {fileID: 0}
     overrideShaderPassIndex: 0
-    overrideMode: 1
+    overrideMode: 0
     overrideDepthState: 0
     depthCompareFunction: 4
     enableWrite: 1

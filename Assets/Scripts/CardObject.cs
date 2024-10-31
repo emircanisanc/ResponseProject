@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-[RequireComponent(typeof(CanvasGroup))]
 public class CardObject : MonoBehaviour
 {
     [SerializeField] protected Image[] icons;
@@ -15,15 +14,38 @@ public class CardObject : MonoBehaviour
     protected Vector3 startScale;
     protected Vector3 startPos;
 
+    public MeshRenderer[] meshRenderers;
+
+    public GameObject outlineObj;
+
     private void Awake()
     {
         startScale = transform.localScale;
         startPos = transform.position;
+
+        foreach (var renderer in meshRenderers)
+        {
+            renderer.material = Instantiate(renderer.material);
+        }
+        outlineObj.SetActive(false);
+
+
+        CloseCardInstant();
     }
+
+    
+
+    protected float durationOfAlpha = 1.2f;
 
     public void ShowCard()
     {
-        canvasGroup.DOFade(1f, 0.3f);
+        canvasGroup.DOFade(1f, durationOfAlpha);
+        foreach (var renderer in meshRenderers)
+        {
+            Color col = renderer.material.color;
+            col.a = 1;
+            renderer.material.DOColor(col, durationOfAlpha);
+        }
     }
 
     public void ShowInstant()
@@ -33,22 +55,34 @@ public class CardObject : MonoBehaviour
 
     public void CloseCard()
     {
-        canvasGroup.DOFade(0f, 0.3f);
+        canvasGroup.DOFade(0f, durationOfAlpha);
+        foreach (var renderer in meshRenderers)
+        {
+            Color col = renderer.material.color;
+            col.a = 0;
+            renderer.material.DOColor(col, durationOfAlpha);
+        }
     }
 
     public void CloseCardInstant()
     {
         canvasGroup.alpha = 0;
+        foreach (var renderer in meshRenderers)
+        {
+            Color col = renderer.material.color;
+            col.a = 0;
+            renderer.material.SetColor("_BaseColor", col);
+        }
     }
 
     public void ScaleCard()
     {
-        transform.DOScale(startScale * 1.1f, 0.3f);
+        transform.DOScale(startScale * 1.1f, durationOfAlpha);
     }
 
     public void ScaleNormal()
     {
-        transform.DOScale(startScale, 0.3f);
+        transform.DOScale(startScale, durationOfAlpha);
     }
 
     public void SetImage(int index)
@@ -64,32 +98,58 @@ public class CardObject : MonoBehaviour
         StartCoroutine(AnimationCoroutine());
     }
 
+
+    public void ResetPos()
+    {
+        transform.DOMove(startPos, durationOfAlpha);
+    }
+
+    public void PlayNotFocusedAnim()
+    {
+        /* StartCoroutine(NotFocused());
+        IEnumerator NotFocused()
+        {
+            float startX = transform.position.x;
+
+            transform.DOMoveX(startX / 2, 0.53f);
+
+            yield return new WaitForSeconds(5);
+
+            transform.DOMoveX(startX, 0.5f);
+        } */
+    }
+
     IEnumerator AnimationCoroutine()
     {
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
+            if (transform.parent.GetChild(i).gameObject != gameObject)
+            {
+                if (transform.parent.GetChild(i).TryGetComponent<CardObject>(out var card))
+                {
+                    card.PlayNotFocusedAnim();
+                }
+            }
+        }
         // Clear any active animations
         yield return new WaitForSeconds(0.5f);
         transform.DOKill();
 
         Sequence seq = DOTween.Sequence();
-        Sequence seq2 = DOTween.Sequence();
+
+        outlineObj.SetActive(true);
 
         // Scale up and down
-        seq.Append(transform.DOScale(startScale * 1.25f, 0.5f).SetEase(Ease.Linear))
-           .Append(transform.DOScale(startScale, 0.5f).SetEase(Ease.Linear))
+        seq.Append(transform.DOScale(startScale * 1.25f, 1f).SetEase(Ease.Linear))
+           .Append(transform.DOScale(startScale, 1f).SetEase(Ease.Linear))
            .SetLoops(-1, LoopType.Yoyo); // -1 for infinite loop
 
-        // Move up and down
-        float delta = 50f;
-        /* seq2.Append(transform.DOMoveY(startPos.y + delta, 0.25f).SetEase(Ease.Linear))
-           .Append(transform.DOMoveY(startPos.y, 0.25f).SetEase(Ease.Linear))
-           .Append(transform.DOMoveY(startPos.y - delta, 0.25f).SetEase(Ease.Linear))
-           .Append(transform.DOMoveY(startPos.y, 0.25f).SetEase(Ease.Linear))
-           .SetLoops(-1, LoopType.Yoyo); // -1 for infinite loop */
 
         yield return new WaitForSeconds(5f);
 
         // Stop the animations after 5 seconds
         seq.Kill();
+        outlineObj.SetActive(false);
 
         ScaleNormal();
         transform.DOMoveY(startPos.y, 0.2f);
