@@ -260,8 +260,8 @@ public class GameManager : MonoBehaviour
     protected float durationOfAlpha = 1.2f;
     protected float durationOfResetCam = 0.8f;
 
-    protected float leftAngle = 210;
-    protected float rightAngle = 130;
+    protected float leftAngle = 150;
+    protected float rightAngle = 210;
     protected float turnSideDuration = 0.8f;
     protected float turnNormalDuration = 0.8f;
     protected float defaultAngle = 180;
@@ -274,10 +274,10 @@ public class GameManager : MonoBehaviour
         IEnumerator DelayBeforeRotate()
         {
             yield return new WaitForSeconds(0.3f);
-            if (isLeft)
+            /* if (isLeft)
                 woman.transform.DORotate(new Vector3(0, leftAngle, 0), turnSideDuration);
             else
-                woman.transform.DORotate(new Vector3(0, rightAngle, 0), turnSideDuration);
+                woman.transform.DORotate(new Vector3(0, rightAngle, 0), turnSideDuration); */
         }
 
     }
