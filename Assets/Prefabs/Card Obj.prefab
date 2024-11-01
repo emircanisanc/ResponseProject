@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2094404335803160028}
   - component: {fileID: 3980918059127343084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Card Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3886817142124107949}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: card scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 3744909688151829576}
   - component: {fileID: 4758800343102509680}
   - component: {fileID: 1158047147131686104}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Frame back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 2754211681740622062}
   - component: {fileID: 8386501093949404396}
   - component: {fileID: 6087073625856107951}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Frame Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 6580523130453949595}
   - component: {fileID: 828642433235401110}
   - component: {fileID: 6405394607285182934}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
