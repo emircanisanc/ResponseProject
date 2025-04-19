@@ -1,0 +1,7 @@
+newmtl defaultMaterial
+map_Kd tex\\DefaultMaterial_1001_albedo.jpeg
+map_Ns tex\\DefaultMaterial_1001_roughness.jpeg
+map_Bump tex\\DefaultMaterial_1001_normal.jpeg
+map_Ks tex\\DefaultMaterial_1001_metallic.png
+map_Ka tex\\DefaultMaterial_1001_AO.jpeg
+

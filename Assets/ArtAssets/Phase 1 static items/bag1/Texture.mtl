@@ -1,0 +1,5 @@
+newmtl shader7
+map_Kd tex\\BagF_Color.1001.jpeg
+map_Ns tex\\BagF_Roug.1001.png
+map_Bump tex\\BagF_Normal.1001.jpeg
+

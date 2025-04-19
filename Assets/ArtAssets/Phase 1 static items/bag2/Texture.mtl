@@ -1,0 +1,6 @@
+newmtl shader8
+map_Kd tex\\BagC_H_Color.1001.jpeg
+map_Ns tex\\BagC_H_Roug.1001.png
+map_Bump tex\\BagC_H_Normal.1001.jpeg
+map_Ks tex\\BagC_H_Metal.1001.png
+

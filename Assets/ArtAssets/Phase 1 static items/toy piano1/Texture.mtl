@@ -1,0 +1,27 @@
+newmtl model_1
+map_Kd tex\\ToyPiano_white_keys_Height.tga.jpeg
+map_Kd tex\\ToyPiano_white_keys_BaseColor.tga.png
+map_Ns tex\\ToyPiano_white_keys_Roughness.tga.png
+map_Bump tex\\ToyPiano_white_keys_Normal.tga.jpeg
+map_Ks tex\\ToyPiano_white_keys_Metallic.tga.png
+
+newmtl model_2
+map_Kd tex\\ToyPiano_black_keys_Height.tga.jpeg
+map_Kd tex\\ToyPiano_black_keys_BaseColor.tga.png
+map_Ns tex\\ToyPiano_black_keys_Roughness.tga.png
+map_Bump tex\\ToyPiano_black_keys_Normal.tga.jpeg
+map_Ks tex\\ToyPiano_black_keys_Metallic.tga.png
+
+newmtl model_3
+map_Kd tex\\ToyPiano_piano_body_Height.tga.jpeg
+map_Kd tex\\ToyPiano_piano_body_BaseColor.tga.png
+map_Ns tex\\ToyPiano_piano_body_Roughness.tga.png
+map_Bump tex\\ToyPiano_piano_body_Normal.tga.jpeg
+map_Ks tex\\ToyPiano_piano_body_Metallic.tga.png
+
+newmtl model_4
+map_Kd tex\\ToyPiano_screws_BaseColor.tga.png
+map_Ns tex\\ToyPiano_screws_Roughness.tga.png
+map_Bump tex\\ToyPiano_screws_Normal.tga.jpeg
+map_Ks tex\\ToyPiano_screws_Metallic.tga.png
+

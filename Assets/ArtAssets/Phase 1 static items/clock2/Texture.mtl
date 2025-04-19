@@ -1,0 +1,12 @@
+newmtl Material.002
+map_Kd tex\\alarmclock.jpeg
+
+newmtl Material.003
+map_Kd tex\\alarmclock_64cb14cbc84a431a8aa8fc1d790633c3.jpeg
+
+newmtl Material.001
+map_Kd tex\\alarmclock.jpeg
+
+newmtl Material.002_2
+map_Kd tex\\alarmclock.jpeg
+

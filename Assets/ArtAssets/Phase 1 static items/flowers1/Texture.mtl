@@ -1,0 +1,6 @@
+newmtl model_1
+map_Kd tex\\texture.jpeg
+
+newmtl model_2
+map_Kd tex\\texture.jpeg
+

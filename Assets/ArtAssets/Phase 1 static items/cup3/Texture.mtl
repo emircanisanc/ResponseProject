@@ -1,0 +1,6 @@
+newmtl model_1
+map_Kd tex\\Jane Tea Cup_Material.001_BaseColor.jpeg
+map_Ns tex\\Jane Tea Cup_Material.001_Roughness.jpeg
+map_Bump tex\\Jane Tea Cup_Material.001_Normal.jpeg
+map_Ks tex\\Jane Tea Cup_Material.001_Metallic.png
+

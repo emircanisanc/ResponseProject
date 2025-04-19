@@ -1,0 +1,14 @@
+newmtl defaultMaterial
+map_Kd tex\\lambert1_albedo.jpeg
+map_Ns tex\\lambert1_roughness.jpeg
+map_Bump tex\\lambert1_normal.jpeg
+map_Ks tex\\lambert1_metallic.png
+map_Ka tex\\lambert1_AO.jpeg
+
+newmtl defaultMaterial_2
+map_Ns tex\\lambert3_roughness.jpeg
+map_Ks tex\\lambert3_metallic.png
+map_d tex\\Grayscale.jpeg
+map_Ka tex\\lambert3_AO.jpeg
+map_Bump tex\\lambert3_normal.jpeg
+

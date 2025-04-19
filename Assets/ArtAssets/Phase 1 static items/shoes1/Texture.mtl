@@ -1,0 +1,15 @@
+newmtl model_1
+map_Kd tex\\Dior.jpeg
+
+newmtl model_2
+map_Kd tex\\Dior.jpeg
+
+newmtl model_3
+map_Kd tex\\Dior.jpeg
+
+newmtl model_4
+map_Kd tex\\Dior.jpeg
+
+newmtl model_5
+map_Kd tex\\Dior.jpeg
+

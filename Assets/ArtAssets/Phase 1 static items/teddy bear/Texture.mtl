@@ -1,0 +1,6 @@
+newmtl Material
+map_Kd tex\\Material_albedo.jpeg
+map_Ns tex\\Material_roughness.png
+map_Bump tex\\Material_normal.jpeg
+map_Ka tex\\Material_AO.jpeg
+

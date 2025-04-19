@@ -1,0 +1,19 @@
+newmtl Material
+map_Bump tex\\T_Phone_Normal.jpeg
+map_Ns tex\\T_Phone_Roughness02.jpeg
+map_Ka tex\\T_Phone_AO.jpeg
+
+newmtl Material.001
+map_Bump tex\\T_Phone_Normal.jpeg
+map_Ns tex\\T_Phone_Roughness02.jpeg
+
+newmtl Button
+map_Bump tex\\T_Phone_Normal.jpeg
+map_Ns tex\\T_Phone_Roughness02.jpeg
+map_Ka tex\\T_Phone_AO.jpeg
+
+newmtl Material.002
+map_Kd tex\\T_Phone_Decal_1aaa58dce1684bc4871193b642333eef.png
+map_o tex\\T_Phone_Decal.png
+map_Bump tex\\T_Phone_Normal.jpeg
+

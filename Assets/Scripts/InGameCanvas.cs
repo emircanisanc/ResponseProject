@@ -11,6 +11,11 @@ public class InGameCanvas : MonoBehaviour
 
     public CanvasGroup canvasGroup;
 
+    void Awake()
+    {
+        FindAnyObjectByType<PhaseSequencer>().OnPhaseEnd += TogglePause;
+    }
+
     void Update()
     {
         if (isLoading) return;
@@ -18,6 +23,19 @@ public class InGameCanvas : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            FindAnyObjectByType<PhaseSequencer>().TryGoNext();
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            FindAnyObjectByType<PhaseSequencer>().TryGoPrevious();
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            FindAnyObjectByType<PhaseSequencer>().StartPhase();
         }
     }
 
@@ -33,7 +51,7 @@ public class InGameCanvas : MonoBehaviour
     public void RestartScene()
     {
         if (isLoading) return;
-        
+
         Time.timeScale = 1f;
         isLoading = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -46,7 +64,8 @@ public class InGameCanvas : MonoBehaviour
         canvasGroup.DOKill();
         if (isPaused)
         {
-            canvasGroup.DOFade(1f, fadeInDuration).OnComplete(() => {
+            canvasGroup.DOFade(1f, fadeInDuration).OnComplete(() =>
+            {
                 Time.timeScale = 0.001f;
             });
         }

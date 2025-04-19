@@ -1,0 +1,27 @@
+newmtl defaultMaterial
+map_Ns tex\\aiStandardSurface1SG_roughness.png
+map_Ks tex\\aiStandardSurface1SG_metallic.png
+map_Ka tex\\aiStandardSurface1SG_AO.jpeg
+map_Bump tex\\aiStandardSurface1SG_normal.png
+
+newmtl defaultMaterial_2
+map_Kd tex\\aiStandardSurface3SG_albedo.jpeg
+map_Ns tex\\aiStandardSurface3SG_roughness.jpeg
+map_Bump tex\\aiStandardSurface3SG_normal.jpeg
+map_Ks tex\\aiStandardSurface3SG_metallic.png
+map_Ka tex\\aiStandardSurface3SG_AO.jpeg
+
+newmtl defaultMaterial_3
+map_Kd tex\\aiStandardSurface3SG_albedo.jpeg
+map_Ns tex\\aiStandardSurface3SG_roughness.jpeg
+map_Bump tex\\aiStandardSurface3SG_normal.jpeg
+map_Ks tex\\aiStandardSurface3SG_metallic.png
+map_Ka tex\\aiStandardSurface3SG_AO.jpeg
+
+newmtl defaultMaterial_4
+map_Kd tex\\aiStandardSurface2SG_albedo.jpeg
+map_Ns tex\\aiStandardSurface2SG_roughness.jpeg
+map_Bump tex\\aiStandardSurface2SG_normal.jpeg
+map_Ks tex\\aiStandardSurface2SG_metallic.png
+map_Ka tex\\aiStandardSurface2SG_AO.jpeg
+

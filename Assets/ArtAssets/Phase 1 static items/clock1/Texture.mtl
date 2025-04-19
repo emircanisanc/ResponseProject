@@ -1,0 +1,34 @@
+newmtl model_1
+map_Kd tex\\Image_4_4.jpeg
+map_Ns tex\\Image_5_5@channels=G.jpeg
+map_Bump tex\\Image_3_3.jpeg
+map_Ks tex\\Image_5_5@channels=B.jpeg
+
+newmtl model_2
+map_Ns tex\\Image_2_2@channels=G.jpeg
+map_o tex\\Image_1_1.jpeg
+map_Ks tex\\Image_2_2@channels=B.jpeg
+map_Kd tex\\Image_1_1.jpeg
+map_Bump tex\\Image_0_0.png
+
+newmtl model_3
+map_Ns tex\\Image_2_2@channels=G.jpeg
+map_o tex\\Image_1_1.jpeg
+map_Ks tex\\Image_2_2@channels=B.jpeg
+map_Kd tex\\Image_1_1.jpeg
+map_Bump tex\\Image_0_0.png
+
+newmtl model_4
+map_Ns tex\\Image_2_2@channels=G.jpeg
+map_o tex\\Image_1_1.jpeg
+map_Ks tex\\Image_2_2@channels=B.jpeg
+map_Kd tex\\Image_1_1.jpeg
+map_Bump tex\\Image_0_0.png
+
+newmtl model_5
+map_Ns tex\\Image_2_2@channels=G.jpeg
+map_o tex\\Image_1_1.jpeg
+map_Ks tex\\Image_2_2@channels=B.jpeg
+map_Kd tex\\Image_1_1.jpeg
+map_Bump tex\\Image_0_0.png
+

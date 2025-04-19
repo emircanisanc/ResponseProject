@@ -1,0 +1,6 @@
+newmtl defaultMaterial
+map_Kd tex\\Cup_albedo.jpeg
+map_Ns tex\\Cup_roughness.jpeg
+map_Bump tex\\Cup_normal.png
+map_Ks tex\\Cup_metallic.png
+

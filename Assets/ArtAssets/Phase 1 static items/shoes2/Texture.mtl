@@ -1,0 +1,6 @@
+newmtl shoes
+map_Kd tex\\defaultMat_Base_Color.jpeg
+map_Ns tex\\defaultMat_Roughness.png
+map_Bump tex\\defaultMat_Normal_OpenGL.jpeg
+map_Ks tex\\defaultMat_Metallic.png
+

@@ -1,0 +1,7 @@
+newmtl giftbox
+map_Kd tex\\giftbox_Albedo.jpeg
+map_Ns tex\\giftbox_Roughness.png
+map_Bump tex\\giftbox_Normal.png
+map_Ks tex\\giftbox_Metallic.png
+map_Ka tex\\giftbox_AO.jpeg
+

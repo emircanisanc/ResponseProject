@@ -1,0 +1,7 @@
+newmtl lamp
+map_Kd tex\\Table_Lamp_SketchFab_Table_lamp_BaseColor.jpeg
+map_Ns tex\\Table_Lamp_SketchFab_Table_lamp_Roughness.jpeg
+map_Bump tex\\Table_Lamp_SketchFab_Table_lamp_Normal.jpeg
+map_Ks tex\\Table_Lamp_SketchFab_Table_lamp_Metallic.jpeg
+map_Ke tex\\Table_Lamp_SketchFab_Table_lamp_Emissive.png
+

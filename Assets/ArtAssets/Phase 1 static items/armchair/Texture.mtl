@@ -1,0 +1,6 @@
+newmtl Material
+map_Kd tex\\Armchair_DefaultMaterial_BaseColor.jpeg
+map_Ns tex\\Armchair_DefaultMaterial_Roughness.jpeg
+map_Bump tex\\Armchair_DefaultMaterial_Normal.jpeg
+map_Ks tex\\Armchair_DefaultMaterial_Metallic.png
+
