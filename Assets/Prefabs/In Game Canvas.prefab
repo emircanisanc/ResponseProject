@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006599980214000246, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
       propertyPath: m_text
-      value: RESTART
+      value: "YEN\u0130DEN BA\u015ELA"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -859,6 +859,10 @@ PrefabInstance:
     - target: {fileID: 4153057703044118757, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006599980214000246, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
+      propertyPath: m_text
+      value: DEVAM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1012,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006599980214000246, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
       propertyPath: m_text
-      value: MENU
+      value: "MEN\xDC"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
