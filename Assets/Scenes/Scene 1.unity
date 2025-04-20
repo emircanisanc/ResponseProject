@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "girl n\xF6tr 6"
       objectReference: {fileID: 0}
+    - target: {fileID: 8622032321561111630, guid: 86156770ca7252941aa05886c67a3f27, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8792837209840784548, guid: 86156770ca7252941aa05886c67a3f27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -192,6 +196,10 @@ PrefabInstance:
     - target: {fileID: 5676270629538508908, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
       propertyPath: m_Name
       value: "girl n\xF6tr"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155456328429271931, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
+      propertyPath: useMovement
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8995210373930265360, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -322,6 +330,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3485746713495855596, guid: 151dcb58bfaaae94698dffd0b9fc3c75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894655533197876778, guid: 151dcb58bfaaae94698dffd0b9fc3c75, type: 3}
+      propertyPath: useMovement
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6938775039435350977, guid: 151dcb58bfaaae94698dffd0b9fc3c75, type: 3}
@@ -507,6 +519,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4677578016001465868, guid: 68042cc597f05324aafeb6c9f8bfb5c0, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9073315686761300380, guid: 68042cc597f05324aafeb6c9f8bfb5c0, type: 3}
       propertyPath: m_Name
       value: girl smile 7
@@ -529,6 +545,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1765855668}
     m_Modifications:
+    - target: {fileID: 636903551146737330, guid: 97e0b6b3df600964e8b177ca0b127b1f, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6251286112596201097, guid: 97e0b6b3df600964e8b177ca0b127b1f, type: 3}
       propertyPath: m_Name
       value: "girl n\xF6tr 5"
@@ -768,6 +788,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: 636903551146737330, guid: 97e0b6b3df600964e8b177ca0b127b1f, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6251286112596201097, guid: 97e0b6b3df600964e8b177ca0b127b1f, type: 3}
       propertyPath: m_Name
       value: "girl n\xF6tr 5"
@@ -830,6 +854,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: 4720890116104567068, guid: b9ed02cd69d91484b9e036a41047115c, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5825510849667053494, guid: b9ed02cd69d91484b9e036a41047115c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -896,6 +924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "girl n\xF6tr (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 6155456328429271931, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8995210373930265360, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -949,6 +981,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1765855668}
     m_Modifications:
+    - target: {fileID: 16320853156347062, guid: ef92c2a487ca6f84c824271ba559dd3d, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1920693086645901451, guid: ef92c2a487ca6f84c824271ba559dd3d, type: 3}
       propertyPath: m_Name
       value: "girl n\xF6tr 7"
@@ -1226,6 +1262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: girl smile 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6800513830536547365, guid: cdf8b19c0830c02458ce1f42f408d92c, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7181006244306155314, guid: cdf8b19c0830c02458ce1f42f408d92c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1425,6 +1465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: girl smile 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5913457396147117311, guid: a0b39262cd053e34789c64810af1184f, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8507117847016564918, guid: a0b39262cd053e34789c64810af1184f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1592,6 +1636,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: 16320853156347062, guid: ef92c2a487ca6f84c824271ba559dd3d, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1920693086645901451, guid: ef92c2a487ca6f84c824271ba559dd3d, type: 3}
       propertyPath: m_Name
       value: "girl n\xF6tr 7"
@@ -1654,6 +1702,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: 5786664819569441074, guid: c61b58a46139aa54ea1cb0b602afed3c, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7083078261674961431, guid: c61b58a46139aa54ea1cb0b602afed3c, type: 3}
       propertyPath: m_Name
       value: "boy n\xF6tr 3"
@@ -1933,6 +1985,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 690476621}
     m_Modifications:
+    - target: {fileID: 1419881118779856484, guid: 25fdd41cf4ca8a34093fcc69cac882e9, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3811826055552053799, guid: 25fdd41cf4ca8a34093fcc69cac882e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2120,6 +2176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "girl n\xF6tr"
       objectReference: {fileID: 0}
+    - target: {fileID: 6155456328429271931, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8995210373930265360, guid: 36122f30cc3c9964f9e48771b8b5b63a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05
@@ -2222,6 +2282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7657112901302155669, guid: b93837d482462eb46b2bf6af060fe21d, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2243,6 +2307,10 @@ PrefabInstance:
     - target: {fileID: 209943926394570506, guid: 360e4297c45ef3e4dab90e5e96c3ca2e, type: 3}
       propertyPath: m_Name
       value: bear
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486519849711304676, guid: 360e4297c45ef3e4dab90e5e96c3ca2e, type: 3}
+      propertyPath: useMovement
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2460234655361924822, guid: 360e4297c45ef3e4dab90e5e96c3ca2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2297,6 +2365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: -6736474125967414300, guid: c825d8577202b7b48bcafc58b4bbd888, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4784083002003159775, guid: c825d8577202b7b48bcafc58b4bbd888, type: 3}
       propertyPath: m_Name
       value: backpack
@@ -2359,6 +2431,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: -1771190733880817258, guid: aefde06eb2a14d4479a38e1433c7b7a6, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4451313300601925706, guid: aefde06eb2a14d4479a38e1433c7b7a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2566,6 +2642,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607754207}
     m_Modifications:
+    - target: {fileID: -918448152223255476, guid: 1f76429f234f3a744a964f76502d9fb4, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5873152826881459105, guid: 1f76429f234f3a744a964f76502d9fb4, type: 3}
       propertyPath: m_Name
       value: clock

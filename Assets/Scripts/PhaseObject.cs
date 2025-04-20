@@ -14,6 +14,11 @@ public class PhaseObject : MonoBehaviour
     private Animator animator;
     private AudioSource audioSource;
 
+    [Header("PHASE 3 ANIMATIONS")]
+    public bool useMovement = true;
+    public Transform startPoint;
+    public Transform endPoint;
+
     public void PlaySound()
     {
         audioSource.clip = audioClip;
@@ -39,6 +44,8 @@ public class PhaseObject : MonoBehaviour
         {
             if (animator) animator.enabled = true;
 
+
+
             return;
         }
         float loopDuration = 5f;
@@ -60,6 +67,8 @@ public class PhaseObject : MonoBehaviour
             audioSource.Stop();
             DOTween.Kill(transform);
             transform.localScale = Vector3.one * targetScale;
+
+
         }
 
     }
@@ -74,7 +83,15 @@ public class PhaseObject : MonoBehaviour
         if (isActive && !isActiveNow)
         {
             isActiveNow = true;
-            if (!instant)
+            if (endPoint && useMovement)
+            {
+                transform.localScale = Vector3.one * targetScale;
+                transform.GetChild(0).localPosition = startPoint.localPosition;
+                transform.GetChild(0).DOLocalMove(endPoint.localPosition, 1f).OnComplete(() => {
+                    
+                });
+            }
+            if (!instant && !useMovement)
             {
                 transform.localScale = Vector3.zero;
                 transform.DOScale(targetScale, DO_APPEAR_TIME);
@@ -86,7 +103,7 @@ public class PhaseObject : MonoBehaviour
         }
         else
         {
-            
+
 
             StopAnim();
 
@@ -99,6 +116,10 @@ public class PhaseObject : MonoBehaviour
             }
             else
             {
+                if (endPoint && useMovement)
+                {
+                    /* transform.GetChild(0).localPosition = startPoint.localPosition; */
+                }
                 transform.localScale = Vector3.zero;
             }
 
