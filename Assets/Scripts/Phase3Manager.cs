@@ -154,6 +154,8 @@ public class Phase3Manager : PhaseSequencer
     public Transform cam;
     public Transform camPoint;
 
+    public Transform chair;
+
     public override void StartPhase()
     {
         if (isStarted) return;
@@ -182,6 +184,8 @@ public class Phase3Manager : PhaseSequencer
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
 
             girl.parent = sitPoint;
+
+            if (chair ) chair.DOScale(1f, 1f);
 
             yield return new WaitForSeconds(1f);
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using JetBrains.Annotations;
 using Unity.Collections;
 using UnityEngine;
 
@@ -18,6 +19,8 @@ public class Phase2Manager : PhaseSequencer
 
     public AudioClip heyLookAtClip;
     Coroutine cor;
+
+    public Transform chair;
 
 
     protected void ShowCurrentObject(float waitTime = 0)
@@ -190,9 +193,12 @@ public class Phase2Manager : PhaseSequencer
 
             girl.parent = sitPoint;
 
+            if (chair ) chair.DOScale(1f, 1f);
+
             yield return new WaitForSeconds(1f);
 
             girl.DOLocalMove(Vector3.zero, sitTime);
+
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Sit");
 
             yield return new WaitForSeconds(sitTime + 1f);

@@ -16,6 +16,11 @@ public class Phase1Manager : PhaseSequencer
     private List<int> leftObjCallOrder;
     private List<int> rightObjCallOrder;
 
+    public Transform circle1;
+    public Transform circle2;
+
+    Vector3 circleScale;
+
     protected void ShowCurrentObject()
     {
         DOTween.Kill(transform);
@@ -27,6 +32,12 @@ public class Phase1Manager : PhaseSequencer
             {
                 currentObj = 0;
                 currentPhase = 1;
+                if (circle1)
+                {
+                    circle1.DOScale(circleScale, 1f);
+                    circle2.DOScale(circleScale, 1f);
+                }
+
             }
             else if (currentPhase == 1 && currentObj >= leftObjCallOrder.Count)
             {
@@ -89,6 +100,12 @@ public class Phase1Manager : PhaseSequencer
 
             currentObj = singleObjCallOrder.Count - 1;
             currentPhase--;
+            if (circle1)
+            {
+                circle1.DOScale(0f, 1f);
+                circle2.DOScale(0f, 1f);
+            }
+
             /* HideAllObjects(true); */
             ShowCurrentObject();
             return;
@@ -96,6 +113,18 @@ public class Phase1Manager : PhaseSequencer
 
         currentObj--;
         ShowCurrentObject();
+    }
+
+    void Awake()
+    {
+
+        if (circle1)
+        {
+            circleScale = circle1.localScale;
+            circle1.transform.localScale = Vector3.zero;
+            circle2.transform.localScale = Vector3.zero;
+        }
+
     }
 
     public override void ContinuePhase()
