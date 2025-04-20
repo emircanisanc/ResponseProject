@@ -1,0 +1,11 @@
+Model Information:
+* title:	Toy Dog with Wheels & glowing Tail
+* source:	https://sketchfab.com/3d-models/toy-dog-with-wheels-glowing-tail-91604b090b6d401ba3d1072f8d5076e5
+* author:	Taenshi (https://sketchfab.com/taenshi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Toy Dog with Wheels & glowing Tail" (https://sketchfab.com/3d-models/toy-dog-with-wheels-glowing-tail-91604b090b6d401ba3d1072f8d5076e5) by Taenshi (https://sketchfab.com/taenshi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

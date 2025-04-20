@@ -16,15 +16,13 @@ public class Phase2Manager : PhaseSequencer
     private List<int> leftObjCallOrder;
     private List<int> rightObjCallOrder;
 
-
-    public AudioClip heyLookClip;
     public AudioClip heyLookAtClip;
     Coroutine cor;
 
 
-    protected void ShowCurrentObject()
+    protected void ShowCurrentObject(float waitTime = 0)
     {
-        if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+        if (animatorActive && waitTime == 0) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
 
         if (cor != null) StopCoroutine(cor);
         DOTween.Kill(transform);
@@ -49,6 +47,8 @@ public class Phase2Manager : PhaseSequencer
 
             IEnumerator FivePhase()
             {
+                yield return new WaitForSeconds(waitTime);
+                 yield return new WaitForSeconds(1.5f);
                 bool sideLeft = Random.Range(0, 2) == 0;
                 string sideAnim = sideLeft ? "L" : "R";
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithEye" + sideAnim);
@@ -64,6 +64,10 @@ public class Phase2Manager : PhaseSequencer
                 if (heyLookAtClip) AudioSource.PlayClipAtPoint(heyLookAtClip, Camera.main.transform.position, audioVol);
 
                 yield return new WaitForSeconds(objShowDuration);
+
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+
+                yield return new WaitForSeconds(0.6f);
 
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
                 if (heyLookAtClip) AudioSource.PlayClipAtPoint(heyLookAtClip, Camera.main.transform.position, audioVol);
@@ -127,23 +131,23 @@ public class Phase2Manager : PhaseSequencer
     }
 
     public Transform girl;
-    public Transform door;
-    public Vector3 doorLocalEulerTarget;
     public Transform girlMovePointsParent;
     public Transform sitPoint;
     public AudioClip firstAudioClip;
     public float headWaitTime = 1.5f;
     public float firstClipTime = 3f;
-    public float doorOpeningTime = 1.5f;
 
     public AudioClip heyLook;
-    public AudioClip heyLookAtThat;
     public bool animatorActive = false;
 
     public float sitTime = 1f;
 
     protected bool isCutsceneEnd = false;
     public float audioVol = 0.5f;
+    public float moveTime = 3f;
+
+    public Transform cam;
+    public Transform camPoint;
 
     public override void StartPhase()
     {
@@ -158,23 +162,20 @@ public class Phase2Manager : PhaseSequencer
 
         IEnumerator StartingCoroutine()
         {
-            Vector3 closedEuler = door.localEulerAngles;
-            yield return new WaitForSeconds(0f);
-            door.DOLocalRotate(doorLocalEulerTarget, doorOpeningTime);
-            yield return new WaitForSeconds(doorOpeningTime);
-
-
-            door.DOLocalRotate(closedEuler, doorOpeningTime).SetDelay(1.5f);
 
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Walk");
 
-            for (int i = 0; i < girlMovePointsParent.childCount; i++)
-            {
+            cam.DOMove(camPoint.position, moveTime).SetEase(Ease.Linear);
 
-            }
+            girl.DOMove(girlMovePointsParent.position, moveTime).SetEase(Ease.Linear);
+
+            yield return new WaitForSeconds(moveTime);
+
+            girl.DORotate(girlMovePointsParent.eulerAngles, 0.5f);
 
             // WAIT TILL GIRL MOVEMENT END
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+
             girl.parent = sitPoint;
 
             yield return new WaitForSeconds(1f);
@@ -183,17 +184,26 @@ public class Phase2Manager : PhaseSequencer
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Sit");
 
             yield return new WaitForSeconds(sitTime + 1f);
-            AudioSource.PlayClipAtPoint(firstAudioClip, Camera.main.transform.position, audioVol);
+            if (firstAudioClip) AudioSource.PlayClipAtPoint(firstAudioClip, Camera.main.transform.position, audioVol);
+
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
+
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
 
             yield return new WaitForSeconds(firstClipTime + 0.5f);
+
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("NodDown");
 
-            ShowCurrentObject();
-            yield return new WaitForSeconds(1f);
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("NodUp");
+            ShowCurrentObject(headWaitTime + 1f);
+            yield return new WaitForSeconds(headWaitTime);
+
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
 
             isCutsceneEnd = true;
+
+            yield return new WaitForSeconds(headWaitTime);
+
+            
         }
 
     }
