@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScale: 3.5
+  audioClip: {fileID: 0}
 --- !u!1001 &3567433332504258879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae925fd778fb3df4182f08ade7ca44d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.132
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ae925fd778fb3df4182f08ade7ca44d6, type: 3}
       propertyPath: m_LocalPosition.z

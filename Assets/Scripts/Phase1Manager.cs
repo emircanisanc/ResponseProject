@@ -19,51 +19,57 @@ public class Phase1Manager : PhaseSequencer
     protected void ShowCurrentObject()
     {
         DOTween.Kill(transform);
-        HideAllObjects();
+        HideAllObjects(false);
+
+        transform.DOScale(transform.localScale, PhaseObject.DO_CLOSE_TIME).OnComplete(() =>
+        {
+            if (currentPhase == 0 && currentObj >= singleObjCallOrder.Count)
+            {
+                currentObj = 0;
+                currentPhase = 1;
+            }
+            else if (currentPhase == 1 && currentObj >= leftObjCallOrder.Count)
+            {
+                EndPhase();
+                return;
+            }
+
+            // Show objects based on current phase and call order
+            if (currentPhase == 0 && singleObjectsParent != null)
+            {
+                int index = singleObjCallOrder[currentObj];
+                singleObjectsParent.GetChild(index).GetComponent<PhaseObject>()?.SetActive(true);
+            }
+            else if (currentPhase == 1 && leftObjectsParent != null && rightObjectsParent != null)
+            {
+                int leftIndex = leftObjCallOrder[currentObj];
+                int rightIndex = rightObjCallOrder[currentObj];
+
+                leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.SetActive(true);
+                rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.SetActive(true);
+            }
+
+            transform.DOScale(transform.localScale, objShowDuration).OnComplete(() =>
+            {
+                currentObj++;
+                ShowCurrentObject();
+            });
+        });
 
         // Handle phase transitions
-        if (currentPhase == 0 && currentObj >= singleObjCallOrder.Count)
-        {
-            currentObj = 0;
-            currentPhase = 1;
-        }
-        else if (currentPhase == 1 && currentObj >= leftObjCallOrder.Count)
-        {
-            EndPhase();
-            return;
-        }
 
-        // Show objects based on current phase and call order
-        if (currentPhase == 0 && singleObjectsParent != null)
-        {
-            int index = singleObjCallOrder[currentObj];
-            singleObjectsParent.GetChild(index).GetComponent<PhaseObject>()?.SetActive(true);
-        }
-        else if (currentPhase == 1 && leftObjectsParent != null && rightObjectsParent != null)
-        {
-            int leftIndex = leftObjCallOrder[currentObj];
-            int rightIndex = rightObjCallOrder[currentObj];
-
-            leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.SetActive(true);
-            rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.SetActive(true);
-        }
-
-        transform.DOScale(transform.localScale, objShowDuration).OnComplete(() => {
-            currentObj++;
-            ShowCurrentObject();
-        });
     }
 
-    protected void HideAllObjects()
+    protected void HideAllObjects(bool instant = true)
     {
         foreach (Transform child in singleObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
 
         foreach (Transform child in leftObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
 
         foreach (Transform child in rightObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
     }
 
     protected void GoNextObject()
@@ -71,6 +77,7 @@ public class Phase1Manager : PhaseSequencer
         if (currentPhase == 1 && currentObj >= leftObjCallOrder.Count - 1) return;
 
         currentObj++;
+        /* HideAllObjects(true); */
         ShowCurrentObject();
     }
 
@@ -82,6 +89,7 @@ public class Phase1Manager : PhaseSequencer
 
             currentObj = singleObjCallOrder.Count - 1;
             currentPhase--;
+            /* HideAllObjects(true); */
             ShowCurrentObject();
             return;
         }

@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScale: 1.67
+  audioClip: {fileID: 0}
 --- !u!1 &7506473996837384844
 GameObject:
   m_ObjectHideFlags: 0

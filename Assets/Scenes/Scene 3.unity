@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 841497149}
   - component: {fileID: 841497148}
   m_Layer: 0
-  m_Name: Main Camera (2)
+  m_Name: ZOOM IN CAM
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,7 +724,7 @@ GameObject:
   - component: {fileID: 1265776634}
   - component: {fileID: 1265776633}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: START CAM
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -986,14 +986,14 @@ MonoBehaviour:
   rightObjectsParent: {fileID: 690476621}
   objShowDuration: 5
   currentObj: 0
-  heyLookAtClip: {fileID: 8300000, guid: fbb3b55debdcff2489c6c927f1185d37, type: 3}
+  heyLookAtClip: {fileID: 0}
   girl: {fileID: 543450653325304116}
   girlMovePointsParent: {fileID: 2138663240}
   sitPoint: {fileID: 7986913800417213454}
-  firstAudioClip: {fileID: 0}
+  firstAudioClip: {fileID: 8300000, guid: d5e2a25491d151648a22d1a917804382, type: 3}
   headWaitTime: 3
   firstClipTime: 3
-  heyLook: {fileID: 8300000, guid: 92cf44562a5777d4da1a01e9b18bd09f, type: 3}
+  heyLook: {fileID: 0}
   animatorActive: 1
   sitTime: 1
   audioVol: 0.5
@@ -2345,8 +2345,6 @@ SceneRoots:
   - {fileID: 785264451}
   - {fileID: 1951996871}
   - {fileID: 1070009722}
-  - {fileID: 1265776636}
-  - {fileID: 841497147}
   - {fileID: 6940705468295978864}
   - {fileID: 272659248}
   - {fileID: 1646593988}
@@ -2356,3 +2354,5 @@ SceneRoots:
   - {fileID: 801336312}
   - {fileID: 1858316168}
   - {fileID: 664190}
+  - {fileID: 1265776636}
+  - {fileID: 841497147}

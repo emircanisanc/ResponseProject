@@ -6,8 +6,8 @@ public class PhaseObject : MonoBehaviour
 {
     public float targetScale = 1f;
 
-    public const float DO_APPEAR_TIME = 0.3f;
-    public const float DO_CLOSE_TIME = 0.2f;
+    public const float DO_APPEAR_TIME = 1f;
+    public const float DO_CLOSE_TIME = 0.7f;
 
     public AudioClip audioClip;
 
@@ -31,6 +31,10 @@ public class PhaseObject : MonoBehaviour
 
     public void PlayAnim(bool isHint = true)
     {
+        if (isPlayingAnim) return;
+
+        isPlayingAnim = true;
+
         if (!isHint)
         {
             if (animator) animator.enabled = true;
@@ -50,16 +54,26 @@ public class PhaseObject : MonoBehaviour
 
     public void StopAnim()
     {
-        audioSource.Stop();
-        DOTween.Kill(transform);
-        transform.localScale = Vector3.one * targetScale;
+        if (isPlayingAnim)
+        {
+            isPlayingAnim = false;
+            audioSource.Stop();
+            DOTween.Kill(transform);
+            transform.localScale = Vector3.one * targetScale;
+        }
+
     }
+
+    bool isPlayingAnim = false;
+
+    bool isActiveNow = true;
 
     public void SetActive(bool isActive, bool instant = false)
     {
         DOTween.Kill(transform);
-        if (isActive)
+        if (isActive && !isActiveNow)
         {
+            isActiveNow = true;
             if (!instant)
             {
                 transform.localScale = Vector3.zero;
@@ -72,9 +86,13 @@ public class PhaseObject : MonoBehaviour
         }
         else
         {
+            
+
             StopAnim();
+
             if (animator) animator.enabled = false;
-            if (!instant)
+
+            if (!instant && isActiveNow)
             {
                 transform.localScale = Vector3.one * targetScale;
                 transform.DOScale(0f, DO_CLOSE_TIME);
@@ -83,6 +101,8 @@ public class PhaseObject : MonoBehaviour
             {
                 transform.localScale = Vector3.zero;
             }
+
+            isActiveNow = false;
         }
     }
 }

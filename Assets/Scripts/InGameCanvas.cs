@@ -14,6 +14,7 @@ public class InGameCanvas : MonoBehaviour
     void Awake()
     {
         FindAnyObjectByType<PhaseSequencer>().OnPhaseEnd += TogglePause;
+        canvasGroup.interactable = false;
     }
 
     void Update()
@@ -73,11 +74,13 @@ public class InGameCanvas : MonoBehaviour
         {
             canvasGroup.DOFade(1f, fadeInDuration).OnComplete(() =>
             {
+                canvasGroup.interactable = true;
                 Time.timeScale = 0.001f;
             });
         }
         else
         {
+            canvasGroup.interactable = false;
             Time.timeScale = 1f;
             canvasGroup.DOFade(0f, fadeOutDuration);
         }

@@ -26,7 +26,7 @@ public class Phase2Manager : PhaseSequencer
 
         if (cor != null) StopCoroutine(cor);
         DOTween.Kill(transform);
-        HideAllObjects();
+        HideAllObjects(false);
 
         // Handle phase transitions
         if (currentPhase == 0 && currentObj >= leftObjCallOrder.Count)
@@ -55,13 +55,21 @@ public class Phase2Manager : PhaseSequencer
 
                 yield return new WaitForSeconds(objShowDuration);
 
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithHead" + sideAnim);
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
                 if (heyLook) AudioSource.PlayClipAtPoint(heyLook, Camera.main.transform.position, audioVol);
+                yield return new WaitForSeconds(1.5f);
+
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithHead" + sideAnim);
 
                 yield return new WaitForSeconds(objShowDuration);
 
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
+
                 if (heyLookAtClip) AudioSource.PlayClipAtPoint(heyLookAtClip, Camera.main.transform.position, audioVol);
+                yield return new WaitForSeconds(1.5f);
+
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
+                
 
                 yield return new WaitForSeconds(objShowDuration);
 
@@ -69,8 +77,12 @@ public class Phase2Manager : PhaseSequencer
 
                 yield return new WaitForSeconds(0.6f);
 
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
                 if (heyLookAtClip) AudioSource.PlayClipAtPoint(heyLookAtClip, Camera.main.transform.position, audioVol);
+                yield return new WaitForSeconds(1.5f);
+
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
+                
 
                 if (sideLeft) leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.PlayAnim();
                 if (!sideLeft) rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.PlayAnim();
@@ -91,14 +103,14 @@ public class Phase2Manager : PhaseSequencer
         }); */
     }
 
-    protected void HideAllObjects()
+    protected void HideAllObjects(bool instant = true)
     {
 
         foreach (Transform child in leftObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
 
         foreach (Transform child in rightObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
     }
 
     protected void GoNextObject()

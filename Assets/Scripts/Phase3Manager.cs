@@ -25,7 +25,7 @@ public class Phase3Manager : PhaseSequencer
 
         if (cor != null) StopCoroutine(cor);
         DOTween.Kill(transform);
-        HideAllObjects();
+        HideAllObjects(false);
 
         // Handle phase transitions
         if (currentPhase == 0 && currentObj >= leftObjCallOrder.Count)
@@ -96,14 +96,14 @@ public class Phase3Manager : PhaseSequencer
         }); */
     }
 
-    protected void HideAllObjects()
+    protected void HideAllObjects(bool instant = true)
     {
 
         foreach (Transform child in leftObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
 
         foreach (Transform child in rightObjectsParent)
-            child.GetComponent<PhaseObject>()?.SetActive(false, true);
+            child.GetComponent<PhaseObject>()?.SetActive(false, instant);
     }
 
     protected void GoNextObject()
