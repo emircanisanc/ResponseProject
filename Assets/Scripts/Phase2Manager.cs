@@ -184,6 +184,8 @@ public class Phase2Manager : PhaseSequencer
 
             yield return new WaitForSeconds(sitTime + 1f);
             AudioSource.PlayClipAtPoint(firstAudioClip, Camera.main.transform.position, audioVol);
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
+
             yield return new WaitForSeconds(firstClipTime + 0.5f);
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("NodDown");
 
