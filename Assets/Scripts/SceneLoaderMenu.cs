@@ -4,6 +4,14 @@ using UnityEngine.SceneManagement;
 public class SceneLoaderMenu : MonoBehaviour
 {
     bool isLoading = false;
+
+    public void QuitGame()
+    {
+        if (isLoading) return;
+        
+        Application.Quit();
+    }
+    
     public void OpenScene1()
     {
         OpenScene(1);

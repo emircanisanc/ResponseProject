@@ -165,7 +165,7 @@ public class Phase2Manager : PhaseSequencer
 
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Walk");
 
-            cam.DOMove(camPoint.position, moveTime).SetEase(Ease.Linear);
+            cam.DOMove(camPoint.position, moveTime).SetDelay(1f).SetEase(Ease.Linear);
 
             girl.DOMove(girlMovePointsParent.position, moveTime).SetEase(Ease.Linear);
 

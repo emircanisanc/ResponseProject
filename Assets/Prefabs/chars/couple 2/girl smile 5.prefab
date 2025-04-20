@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScale: 3.5
+  audioClip: {fileID: 0}
 --- !u!1 &1956458927149341125
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 9073442099667510911, guid: 5606fb19ff085ec4ea758eb6ab5e7846, type: 3}
+  - {fileID: 2100000, guid: d66c12052bdf29349864e26a0715be43, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

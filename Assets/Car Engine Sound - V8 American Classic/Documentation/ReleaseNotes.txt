@@ -1,0 +1,15 @@
+Release Notes:
+
+v1.3
+- Remastered some audio files
+---------------------------------------------------------------------------------
+v1.2
+- Added start engine sounds
+- Remastered all engine off sounds
+- Re recorded all demo sounds
+- Updated RealisticEngineSounds_assets unity asset package to support RES v1.2
+---------------------------------------------------------------------------------
+v1.1
+- Updates RealisticEngineSounds_assets unity asset package to support RES v1.1
+- Fixed some wav files looping
+- Removed pluck noises

@@ -35,8 +35,15 @@ public class InGameCanvas : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            FindAnyObjectByType<PhaseSequencer>().StartPhase();
+            /* FindAnyObjectByType<PhaseSequencer>().StartPhase(); */
         }
+    }
+
+    void Start()
+    {
+        transform.DOScale(transform.localScale, 1f).OnComplete(() => {
+            FindAnyObjectByType<PhaseSequencer>().StartPhase();
+        });
     }
 
     public void ReturnToMenu()

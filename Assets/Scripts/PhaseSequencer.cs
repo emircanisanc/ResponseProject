@@ -8,7 +8,7 @@ public abstract class PhaseSequencer : MonoBehaviour
     public Action OnPhaseStarted;
     public Action OnPhaseContinue;
     protected bool isStarted = false;
-    protected bool isEnd = false;
+    public bool isEnd = false;
     protected bool isStopped = false;
     public abstract void StartPhase();
     public abstract void StopPhase();

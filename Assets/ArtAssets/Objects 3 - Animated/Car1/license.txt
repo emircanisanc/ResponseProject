@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Polo
+* source:	https://sketchfab.com/3d-models/low-poly-polo-ad506688595341e880d06e04a5ce2670
+* author:	normal|studio (https://sketchfab.com/Urmanga)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Polo" (https://sketchfab.com/3d-models/low-poly-polo-ad506688595341e880d06e04a5ce2670) by normal|studio (https://sketchfab.com/Urmanga) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
