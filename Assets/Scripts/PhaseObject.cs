@@ -28,7 +28,7 @@ public class PhaseObject : MonoBehaviour
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = transform.GetChild(0).gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.loop = true;
         SetActive(false, true);

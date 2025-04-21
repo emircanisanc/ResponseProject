@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class Phase2Manager : PhaseSequencer
 {
+    public bool skipSitting = true;
+
     public Transform leftObjectsParent;
     public Transform rightObjectsParent;
 
@@ -51,7 +53,7 @@ public class Phase2Manager : PhaseSequencer
             IEnumerator FivePhase()
             {
                 yield return new WaitForSeconds(waitTime);
-                 yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(1.5f);
                 bool sideLeft = Random.Range(0, 2) == 0;
                 string sideAnim = sideLeft ? "L" : "R";
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithEye" + sideAnim);
@@ -72,7 +74,7 @@ public class Phase2Manager : PhaseSequencer
                 yield return new WaitForSeconds(1.5f);
 
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
-                
+
 
                 yield return new WaitForSeconds(objShowDuration);
 
@@ -85,7 +87,7 @@ public class Phase2Manager : PhaseSequencer
                 yield return new WaitForSeconds(1.5f);
 
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
-                
+
 
                 if (sideLeft) leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.PlayAnim();
                 if (!sideLeft) rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.PlayAnim();
@@ -178,28 +180,41 @@ public class Phase2Manager : PhaseSequencer
         IEnumerator StartingCoroutine()
         {
 
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Walk");
+            if (!skipSitting)
+            {
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Walk");
 
-            cam.DOMove(camPoint.position, moveTime).SetDelay(1f).SetEase(Ease.Linear);
+                cam.DOMove(camPoint.position, moveTime).SetDelay(1f).SetEase(Ease.Linear);
 
-            girl.DOMove(girlMovePointsParent.position, moveTime).SetEase(Ease.Linear);
+                girl.DOMove(girlMovePointsParent.position, moveTime).SetEase(Ease.Linear);
 
-            yield return new WaitForSeconds(moveTime);
+                yield return new WaitForSeconds(moveTime);
 
-            girl.DORotate(girlMovePointsParent.eulerAngles, 0.5f);
+                girl.DORotate(girlMovePointsParent.eulerAngles, 0.5f);
 
-            // WAIT TILL GIRL MOVEMENT END
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+                // WAIT TILL GIRL MOVEMENT END
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
 
-            girl.parent = sitPoint;
+                girl.parent = sitPoint;
 
-            if (chair ) chair.DOScale(1f, 1f);
+                if (chair) chair.DOScale(1f, 1f);
 
-            yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1f);
 
-            girl.DOLocalMove(Vector3.zero, sitTime);
+                girl.DOLocalMove(Vector3.zero, sitTime);
 
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Sit");
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Sit");
+            }
+            else
+            {
+                girl.parent = sitPoint;
+
+                girl.localPosition = Vector3.zero;
+                girl.eulerAngles = girlMovePointsParent.eulerAngles;
+
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
+            }
+
 
             yield return new WaitForSeconds(sitTime + 1f);
             if (firstAudioClip) AudioSource.PlayClipAtPoint(firstAudioClip, Camera.main.transform.position, audioVol);
@@ -221,7 +236,7 @@ public class Phase2Manager : PhaseSequencer
 
             yield return new WaitForSeconds(headWaitTime);
 
-            
+
         }
 
     }

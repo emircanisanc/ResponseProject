@@ -42,7 +42,7 @@ public class InGameCanvas : MonoBehaviour
 
     void Start()
     {
-        transform.DOScale(transform.localScale, 1f).OnComplete(() => {
+        transform.DOScale(transform.localScale, 0.1f).OnComplete(() => {
             FindAnyObjectByType<PhaseSequencer>().StartPhase();
         });
     }
