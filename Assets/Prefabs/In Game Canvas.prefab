@@ -535,7 +535,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DURAKLADI
+  m_text: Durakladi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -728,7 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006599980214000246, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
       propertyPath: m_text
-      value: "YEN\u0130DEN BA\u015ELA"
+      value: Yeniden Basla
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006599980214000246, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
       propertyPath: m_text
-      value: DEVAM
+      value: Devam
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1016,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006599980214000246, guid: 4b74c489badc03847b955465dbe099b4, type: 3}
       propertyPath: m_text
-      value: "MEN\xDC"
+      value: "Men\xFC"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
