@@ -34,8 +34,8 @@ public class Phase1Manager : PhaseSequencer
                 currentPhase = 1;
                 if (circle1)
                 {
-                    circle1.DOScale(circleScale, 1f);
-                    circle2.DOScale(circleScale, 1f);
+                    circle1.DOScale(circleScale, 0.01f);
+                    circle2.DOScale(circleScale, 0.01f);
                 }
 
             }
@@ -102,8 +102,8 @@ public class Phase1Manager : PhaseSequencer
             currentPhase--;
             if (circle1)
             {
-                circle1.DOScale(0f, 1f);
-                circle2.DOScale(0f, 1f);
+                circle1.DOScale(0f, 1f).SetDelay(0.2f);
+                circle2.DOScale(0f, 1f).SetDelay(0.2f);
             }
 
             /* HideAllObjects(true); */
