@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -28,7 +29,11 @@ public class PhaseObject : MonoBehaviour
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        audioSource = transform.GetChild(0).gameObject.AddComponent<AudioSource>();
+        var parent = transform.GetChild(0).gameObject;
+        new GameObject("source").transform.parent = parent.transform;
+        audioSource = parent.transform.GetChild(parent.transform.childCount - 1).gameObject.AddComponent<AudioSource>();
+        audioSource.transform.localPosition = new Vector3(transform.position.x * 3, 0, 0);
+        audioSource.panStereo = Math.Clamp(transform.position.x, -1, 1);
         audioSource.playOnAwake = false;
         audioSource.loop = true;
         SetActive(false, true);
