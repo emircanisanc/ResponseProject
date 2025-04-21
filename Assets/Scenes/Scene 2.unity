@@ -1897,14 +1897,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WOMAN
       objectReference: {fileID: 0}
-    - target: {fileID: 1556560998237140455, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2612466140877288025, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: ded016d7502cb834f800fe3fc933936a, type: 2}
     - target: {fileID: 7986913800154474823, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.42
