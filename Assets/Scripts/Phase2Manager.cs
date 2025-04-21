@@ -25,7 +25,7 @@ public class Phase2Manager : PhaseSequencer
 
     protected void ShowCurrentObject(float waitTime = 0)
     {
-        if (animatorActive && waitTime == 0) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+        if (animatorActive && waitTime == 0) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
 
         if (cor != null) StopCoroutine(cor);
         DOTween.Kill(transform);
@@ -66,7 +66,7 @@ public class Phase2Manager : PhaseSequencer
 
                 yield return new WaitForSeconds(objShowDuration);
 
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("suna");
 
                 if (heyLookAtClip) AudioSource.PlayClipAtPoint(heyLookAtClip, Camera.main.transform.position, audioVol);
                 yield return new WaitForSeconds(1.5f);
@@ -76,11 +76,11 @@ public class Phase2Manager : PhaseSequencer
 
                 yield return new WaitForSeconds(objShowDuration);
 
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
 
                 yield return new WaitForSeconds(0.6f);
 
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("suna");
                 if (heyLookAtClip) AudioSource.PlayClipAtPoint(heyLookAtClip, Camera.main.transform.position, audioVol);
                 yield return new WaitForSeconds(1.5f);
 
@@ -206,7 +206,7 @@ public class Phase2Manager : PhaseSequencer
 
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
 
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("etkinlik");
 
             yield return new WaitForSeconds(firstClipTime + 0.5f);
 
@@ -215,7 +215,7 @@ public class Phase2Manager : PhaseSequencer
             ShowCurrentObject(headWaitTime + 1f);
             yield return new WaitForSeconds(headWaitTime);
 
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
 
             isCutsceneEnd = true;
 

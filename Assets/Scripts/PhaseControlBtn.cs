@@ -7,7 +7,7 @@ public class PhaseControlBtn : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer < 1f) return;
+        /* if (timer < 1f) return; */
 
         timer = 0;
         if (FindAnyObjectByType<PhaseSequencer>().isEnd)

@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 690476620}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -1.8, y: -0.68, z: 0}
+  m_LocalPosition: {x: -1.3, y: -0.68, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -410,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 841497146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05500001, y: 1.046, z: -7}
+  m_LocalPosition: {x: -0.05500001, y: 1.046, z: -6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   rightObjectsParent: {fileID: 690476621}
   objShowDuration: 5
   currentObj: 0
-  heyLookAtClip: {fileID: 8300000, guid: 7a76fb1026ccb53489bb5e2aba5dfbee, type: 3}
+  heyLookAtClip: {fileID: 8300000, guid: bb48a3430b4ad2249acabac0761e6bb0, type: 3}
   chair: {fileID: 3594257676125539142}
   girl: {fileID: 543450653325304116}
   girlMovePointsParent: {fileID: 2138663240}
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   firstAudioClip: {fileID: 8300000, guid: eaa61ac05691cc44abe32abfce0c1b75, type: 3}
   headWaitTime: 3
   firstClipTime: 4
-  heyLook: {fileID: 8300000, guid: 81c48446aff74c04db4d83509bd9233d, type: 3}
+  heyLook: {fileID: 8300000, guid: 3cc4e80f50622fc4da48b0afc6ab72e6, type: 3}
   animatorActive: 1
   sitTime: 1
   audioVol: 0.5
@@ -1299,7 +1299,7 @@ Transform:
   m_GameObject: {fileID: 1765855667}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 1.8, y: -0.68, z: 0}
+  m_LocalPosition: {x: 1.3, y: -0.68, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1525,7 +1525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986913800154474823, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.009
+      value: 0.06773909
       objectReference: {fileID: 0}
     - target: {fileID: 7986913800154474823, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1911,7 +1911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986913800154474823, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.009
+      value: 0.06773909
       objectReference: {fileID: 0}
     - target: {fileID: 7986913800154474823, guid: 9394a038f9af00043ae6b2c671aad663, type: 3}
       propertyPath: m_LocalPosition.z

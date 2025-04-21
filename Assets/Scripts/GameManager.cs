@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
                         StartCoroutine(Stage3());
                         break;
                     case 4:
-                        EditorApplication.isPlaying = false;
+                        /* EditorApplication.isPlaying = false; */
                         break;
                 }
             }
@@ -163,8 +163,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(DelayAfterCardsClosed);
         }
 
-        if (StopAfterStageEnd)
-            EditorApplication.isPlaying = false;
+        /* if (StopAfterStageEnd)
+            EditorApplication.isPlaying = false; */
 
         blackCanvas.DOFade(1f, blackCanvasDuration);
 
@@ -242,8 +242,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(DelayAfterCardsClosed);
         }
 
-        if (StopAfterStageEnd)
-            EditorApplication.isPlaying = false;
+        /* if (StopAfterStageEnd)
+            EditorApplication.isPlaying = false; */
 
         blackCanvas.DOFade(1f, blackCanvasDuration);
 
@@ -377,8 +377,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(DelayAfterCardsClosed);
         }
 
-        if (StopAfterStageEnd)
-            EditorApplication.isPlaying = false;
+        /* if (StopAfterStageEnd)
+            EditorApplication.isPlaying = false; */
 
         blackCanvas.DOFade(1f, blackCanvasDuration);
 
@@ -490,8 +490,8 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(DelayAfterCardsClosed);
         }
 
-        if (StopAfterStageEnd)
-            EditorApplication.isPlaying = false;
+        /* if (StopAfterStageEnd)
+            EditorApplication.isPlaying = false; */
 
         blackCanvas.DOFade(1f, blackCanvasDuration);
 

@@ -21,7 +21,7 @@ public class Phase3Manager : PhaseSequencer
 
     protected void ShowCurrentObject(float waitTime = 0)
     {
-        if (animatorActive && waitTime == 0) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+        if (animatorActive && waitTime == 0) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
 
         if (cor != null) StopCoroutine(cor);
         DOTween.Kill(transform);
@@ -50,7 +50,7 @@ public class Phase3Manager : PhaseSequencer
                 yield return new WaitForSeconds(1.5f);
                 bool sideLeft = Random.Range(0, 2) == 0;
                 string sideAnim = sideLeft ? "L" : "R";
-                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
                 /* if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithEye" + sideAnim); */
 
                 yield return new WaitForSeconds(objShowDuration);
@@ -197,7 +197,7 @@ public class Phase3Manager : PhaseSequencer
 
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
 
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Talk");
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("which");
 
             yield return new WaitForSeconds(firstClipTime + 0.5f);
 
@@ -206,7 +206,7 @@ public class Phase3Manager : PhaseSequencer
             ShowCurrentObject(headWaitTime + 1f);
             yield return new WaitForSeconds(headWaitTime);
 
-            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Idle");
+            if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
 
             isCutsceneEnd = true;
 
