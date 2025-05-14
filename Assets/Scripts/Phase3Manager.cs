@@ -142,7 +142,7 @@ public class Phase3Manager : PhaseSequencer
     public float headWaitTime = 1.5f;
     public float firstClipTime = 3f;
 
-    public AudioClip heyLook;
+    /* public AudioClip heyLook; */
     public bool animatorActive = false;
 
     public float sitTime = 1f;
@@ -155,6 +155,9 @@ public class Phase3Manager : PhaseSequencer
     public Transform camPoint;
 
     public Transform chair;
+
+    public Transform cammmm;
+    public Transform camSittingPoint;
 
     public override void StartPhase()
     {
@@ -191,6 +194,8 @@ public class Phase3Manager : PhaseSequencer
 
             girl.DOLocalMove(Vector3.zero, sitTime);
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Sit");
+
+            cammmm.transform.DOMove(camSittingPoint.position, sitTime);
 
             yield return new WaitForSeconds(sitTime + 1f);
             if (firstAudioClip) AudioSource.PlayClipAtPoint(firstAudioClip, Camera.main.transform.position, audioVol);
