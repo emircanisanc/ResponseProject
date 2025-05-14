@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -24,7 +25,7 @@ public class Phase1Manager : PhaseSequencer
     protected void ShowCurrentObject()
     {
         DOTween.Kill(transform);
-        HideAllObjects(false);
+        HideAllObjects(true);
 
         transform.DOScale(transform.localScale, PhaseObject.DO_CLOSE_TIME).OnComplete(() =>
         {
@@ -34,8 +35,10 @@ public class Phase1Manager : PhaseSequencer
                 currentPhase = 1;
                 if (circle1)
                 {
-                    circle1.DOScale(circleScale, 0.01f);
-                    circle2.DOScale(circleScale, 0.01f);
+                    circle1.localScale = circleScale;
+                    circle2.localScale = circleScale;
+                    /* circle1.DOScale(circleScale, 0.01f);
+                    circle2.DOScale(circleScale, 0.01f); */
                 }
 
             }
@@ -49,15 +52,15 @@ public class Phase1Manager : PhaseSequencer
             if (currentPhase == 0 && singleObjectsParent != null)
             {
                 int index = singleObjCallOrder[currentObj];
-                singleObjectsParent.GetChild(index).GetComponent<PhaseObject>()?.SetActive(true);
+                singleObjectsParent.GetChild(index).GetComponent<PhaseObject>()?.SetActive(true, true);
             }
             else if (currentPhase == 1 && leftObjectsParent != null && rightObjectsParent != null)
             {
                 int leftIndex = leftObjCallOrder[currentObj];
                 int rightIndex = rightObjCallOrder[currentObj];
 
-                leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.SetActive(true);
-                rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.SetActive(true);
+                leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.SetActive(true, true);
+                rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.SetActive(true, true);
             }
 
             transform.DOScale(transform.localScale, objShowDuration).OnComplete(() =>
@@ -134,18 +137,52 @@ public class Phase1Manager : PhaseSequencer
         isStopped = false;
     }
 
+    public Animator woman;
+
+    public AudioClip startingTalk;
+    public float audioVol = 0.5f;
+    public float talkDuration = 2.5f;
+    public float walkDistance = 10f;
+    public float walkDuration = 5f;
+    public float turnDuration = 0.5f;
+
     public override void StartPhase()
     {
         if (isStarted) return;
 
         isStarted = true;
 
-        // Generate randomized call orders
-        singleObjCallOrder = GenerateRandomOrder(singleObjectsParent.childCount);
-        leftObjCallOrder = GenerateRandomOrder(leftObjectsParent.childCount);
-        rightObjCallOrder = new List<int>(leftObjCallOrder);
+        StartCoroutine(Starting());
 
-        ShowCurrentObject();
+        IEnumerator Starting()
+        {
+
+            woman.SetTrigger("Idle");
+
+            yield return new WaitForSeconds(1f);
+
+            woman.SetTrigger("new");
+            if (startingTalk) AudioSource.PlayClipAtPoint(startingTalk, Camera.main.transform.position, audioVol);
+
+            yield return new WaitForSeconds(talkDuration);
+
+            woman.SetTrigger("Walk");
+
+            woman.transform.DOMove(woman.transform.position + woman.transform.right * walkDistance, walkDuration);
+            woman.transform.DORotate(new Vector3(0, 270, 0), turnDuration);
+
+            yield return new WaitForSeconds(walkDuration);
+
+
+            singleObjCallOrder = GenerateRandomOrder(singleObjectsParent.childCount);
+            leftObjCallOrder = GenerateRandomOrder(leftObjectsParent.childCount);
+            rightObjCallOrder = new List<int>(leftObjCallOrder);
+
+            ShowCurrentObject();
+        }
+
+        // Generate randomized call orders
+
     }
 
     public override void StopPhase()
@@ -180,11 +217,11 @@ public class Phase1Manager : PhaseSequencer
         for (int i = 0; i < count; i++) order.Add(i);
 
         // Fisher-Yates shuffle
-        for (int i = count - 1; i > 0; i--)
+        /* for (int i = count - 1; i > 0; i--)
         {
             int rand = Random.Range(0, i + 1);
             (order[i], order[rand]) = (order[rand], order[i]);
-        }
+        } */
 
         return order;
     }

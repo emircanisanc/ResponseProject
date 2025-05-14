@@ -113,7 +113,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.945}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5835012031791348343}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bbfd466b2f7954f8a74522da0b3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScale: 1
+  targetScale: 0.9
   audioClip: {fileID: 0}
   useMovement: 0
   startPoint: {fileID: 0}
@@ -162,7 +162,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.504, z: 0}
-  m_LocalScale: {x: 0.32825, y: 0.32825, z: 0.32825}
+  m_LocalScale: {x: 0.20981742, y: 0.20981742, z: 0.20981742}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5108056480759128807}

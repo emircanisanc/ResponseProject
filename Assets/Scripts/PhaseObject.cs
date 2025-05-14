@@ -58,6 +58,15 @@ public class PhaseObject : MonoBehaviour
 
         transform.localScale = Vector3.one * targetScale; // Ensure starting scale
 
+        /* if (USE_DO_SCALE)
+        {
+
+        }
+        else
+        {
+
+        } */
+
         transform.DOScale(targetScale * 1.2f, singleAnimTime)
             .SetLoops(4, LoopType.Yoyo) // Scale up, then scale back
             .SetEase(Ease.InOutSine);
@@ -78,6 +87,8 @@ public class PhaseObject : MonoBehaviour
 
     }
 
+    private bool USE_DO_SCALE = false;
+
     bool isPlayingAnim = false;
 
     bool isActiveNow = true;
@@ -92,14 +103,17 @@ public class PhaseObject : MonoBehaviour
             {
                 transform.localScale = Vector3.one * targetScale;
                 transform.GetChild(0).localPosition = startPoint.localPosition;
-                transform.GetChild(0).DOLocalMove(endPoint.localPosition, 1f).OnComplete(() => {
-                    
+                transform.GetChild(0).DOLocalMove(endPoint.localPosition, 1f).OnComplete(() =>
+                {
+
                 });
             }
             if (!instant && !useMovement)
             {
                 transform.localScale = Vector3.zero;
-                transform.DOScale(targetScale, DO_APPEAR_TIME);
+
+                if (USE_DO_SCALE) transform.DOScale(targetScale, DO_APPEAR_TIME);
+                else transform.localScale = targetScale * Vector3.one;
             }
             else
             {
@@ -116,8 +130,16 @@ public class PhaseObject : MonoBehaviour
 
             if (!instant && isActiveNow)
             {
-                transform.localScale = Vector3.one * targetScale;
-                transform.DOScale(0f, DO_CLOSE_TIME);
+                if (USE_DO_SCALE)
+                {
+                    transform.localScale = Vector3.one * targetScale;
+                    transform.DOScale(0f, DO_CLOSE_TIME);
+                }
+                else
+                {
+                    transform.localScale = Vector3.zero;
+                }
+
             }
             else
             {

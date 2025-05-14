@@ -253,12 +253,12 @@ public class Phase3Manager : PhaseSequencer
         for (int i = 0; i < count; i++) order.Add(i);
 
         // Fisher-Yates shuffle
-        for (int i = count - 1; i > 0; i--)
+        /* for (int i = count - 1; i > 0; i--)
         {
             int rand = Random.Range(0, i + 1);
             (order[i], order[rand]) = (order[rand], order[i]);
         }
-
+ */
         return order;
     }
 }

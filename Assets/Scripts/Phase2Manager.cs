@@ -24,6 +24,12 @@ public class Phase2Manager : PhaseSequencer
 
     public Transform chair;
 
+    private List<bool> sideList;
+
+    void Awake()
+    {
+        sideList = new List<bool>();
+    }
 
     protected void ShowCurrentObject(float waitTime = 0)
     {
@@ -54,9 +60,28 @@ public class Phase2Manager : PhaseSequencer
             {
                 yield return new WaitForSeconds(waitTime);
                 yield return new WaitForSeconds(1.5f);
-                bool sideLeft = Random.Range(0, 2) == 0;
+                bool sideLeft;
+
+                if (sideList.Count >= 2 &&
+                    sideList[sideList.Count - 1] == sideList[sideList.Count - 2])
+                {
+                    // If the last two directions are the same, choose the opposite
+                    sideLeft = !sideList[sideList.Count - 1];
+                }
+                else
+                {
+                    // Otherwise, randomize
+                    sideLeft = Random.Range(0, 2) == 0;
+                }
+
+                sideList.Add(sideLeft);
+
                 string sideAnim = sideLeft ? "L" : "R";
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithEye" + sideAnim);
+
+                yield return new WaitForSeconds(objShowDuration);
+
+                if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithHead" + sideAnim);
 
                 yield return new WaitForSeconds(objShowDuration);
 
@@ -277,12 +302,12 @@ public class Phase2Manager : PhaseSequencer
         for (int i = 0; i < count; i++) order.Add(i);
 
         // Fisher-Yates shuffle
-        for (int i = count - 1; i > 0; i--)
-        {
-            int rand = Random.Range(0, i + 1);
-            (order[i], order[rand]) = (order[rand], order[i]);
-        }
-
+        /*  for (int i = count - 1; i > 0; i--)
+         {
+             int rand = Random.Range(0, i + 1);
+             (order[i], order[rand]) = (order[rand], order[i]);
+         }
+  */
         return order;
     }
 }
