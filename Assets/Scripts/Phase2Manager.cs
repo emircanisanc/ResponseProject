@@ -74,6 +74,9 @@ public class Phase2Manager : PhaseSequencer
                     sideLeft = Random.Range(0, 2) == 0;
                 }
 
+                var boolList = new[] { true, false, false, true, false, true, true, false };
+                sideLeft = boolList[currentObj];
+
                 sideList.Add(sideLeft);
 
                 string sideAnim = sideLeft ? "L" : "R";

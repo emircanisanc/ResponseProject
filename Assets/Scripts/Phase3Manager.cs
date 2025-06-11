@@ -49,6 +49,9 @@ public class Phase3Manager : PhaseSequencer
                 yield return new WaitForSeconds(waitTime);
                 yield return new WaitForSeconds(1.5f);
                 bool sideLeft = Random.Range(0, 2) == 0;
+                var boolList = new[] { true, false, false, true, false, true, true, false };
+                sideLeft = boolList[currentObj];
+                
                 string sideAnim = sideLeft ? "L" : "R";
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
                 /* if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithEye" + sideAnim); */
