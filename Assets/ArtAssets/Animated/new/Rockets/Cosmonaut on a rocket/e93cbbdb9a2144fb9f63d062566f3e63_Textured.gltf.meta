@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: 5a8598f0c100b4240bf2afb0077a03ee
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\0f7723de44da421f892e3d7b0a52874a_R_character_mtl_roughness.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\0f7723de44da421f892e3d7b0a52874a_R_character_mtl_roughness.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\3cb8136bfed04e26915908822b5f7cc0_RGB_character_mtl_albedo.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\3cb8136bfed04e26915908822b5f7cc0_RGB_character_mtl_albedo.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\47304f0d4dea45c79692a79753e769a3_R_rocket_mtl_metallic.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\47304f0d4dea45c79692a79753e769a3_R_rocket_mtl_metallic.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\61dbe3904edb426096dc4fdd8fe910ef_R_character_mtl_AO.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\61dbe3904edb426096dc4fdd8fe910ef_R_character_mtl_AO.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\89c415561e8841adafc468f934dd5086_RGB_rocket_mtl_emissive.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\89c415561e8841adafc468f934dd5086_RGB_rocket_mtl_emissive.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\9cf7b64bdbbd43b3982a9a60a744158f_R_rocket_mtl_AO.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\9cf7b64bdbbd43b3982a9a60a744158f_R_rocket_mtl_AO.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\9ff25ad67464458ba3414e2b3c9ca915_RGB_fire_mtl_albedo.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\9ff25ad67464458ba3414e2b3c9ca915_RGB_fire_mtl_albedo.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\b6aebc883c76479dae839699707b356a_N_rocket_mtl_normal.png
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\b6aebc883c76479dae839699707b356a_N_rocket_mtl_normal.png
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\c1462b085c53437f8b7371d1953d788a_RGB_rocket_mtl_albedo.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\c1462b085c53437f8b7371d1953d788a_RGB_rocket_mtl_albedo.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\c68d93837252426194ee494d4da87acd_R_fire_mtl_opacity.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\c68d93837252426194ee494d4da87acd_R_fire_mtl_opacity.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\cfd30fcdd4d0461c9423aa4ae564634a_N_character_mtl_normal.png
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\cfd30fcdd4d0461c9423aa4ae564634a_N_character_mtl_normal.png
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\d8f903649e20414e923ff7910af85440_R_rocket_mtl_roughness.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\d8f903649e20414e923ff7910af85440_R_rocket_mtl_roughness.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\de2ce27c0f844dacb8fcdde3c448b66f_R_character_mtl_metallic.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\de2ce27c0f844dacb8fcdde3c448b66f_R_character_mtl_metallic.jpeg
+  - type: 1
+    originalUri: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\f5ce0988dea345c4a5178292317fb49b_RGB_fire_mtl_emissive.jpeg
+    assetPath: Assets\ArtAssets\Animated\new\Rockets\Cosmonaut on a rocket\f5ce0988dea345c4a5178292317fb49b_RGB_fire_mtl_emissive.jpeg
+  reportItems:
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []
+  - type: 2
+    code: 19
+    messages: []

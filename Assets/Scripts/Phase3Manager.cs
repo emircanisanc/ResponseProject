@@ -51,7 +51,7 @@ public class Phase3Manager : PhaseSequencer
                 bool sideLeft = Random.Range(0, 2) == 0;
                 var boolList = new[] { true, false, false, true, false, true, true, false };
                 sideLeft = boolList[currentObj];
-                
+
                 string sideAnim = sideLeft ? "L" : "R";
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("sitIdle");
                 /* if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithEye" + sideAnim); */
@@ -162,6 +162,8 @@ public class Phase3Manager : PhaseSequencer
     public Transform cammmm;
     public Transform camSittingPoint;
 
+    public float extraZoomTimeOfCam = 1f;
+
     public override void StartPhase()
     {
         if (isStarted) return;
@@ -191,16 +193,18 @@ public class Phase3Manager : PhaseSequencer
 
             girl.parent = sitPoint;
 
-            if (chair ) chair.DOScale(1f, 1f);
+            if (chair) chair.DOScale(1f, 1f);
+
+            cammmm.transform.DOMove(camSittingPoint.position, sitTime + extraZoomTimeOfCam);
 
             yield return new WaitForSeconds(1f);
 
             girl.DOLocalMove(Vector3.zero, sitTime);
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("Sit");
 
-            cammmm.transform.DOMove(camSittingPoint.position, sitTime);
+            
 
-            yield return new WaitForSeconds(sitTime + 1f);
+            yield return new WaitForSeconds(sitTime + 1f + extraZoomTimeOfCam);
             if (firstAudioClip) AudioSource.PlayClipAtPoint(firstAudioClip, Camera.main.transform.position, audioVol);
 
             if (animatorActive) girl.GetComponentInChildren<Animator>().SetLayerWeight(1, 1);
