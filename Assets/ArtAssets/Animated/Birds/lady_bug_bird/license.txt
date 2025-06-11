@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lady Bug Bird
+* source:	https://sketchfab.com/3d-models/lady-bug-bird-5c89639f112e4c4d8c919307cf80c559
+* author:	xidingvienna (https://sketchfab.com/xidingvienna)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lady Bug Bird" (https://sketchfab.com/3d-models/lady-bug-bird-5c89639f112e4c4d8c919307cf80c559) by xidingvienna (https://sketchfab.com/xidingvienna) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

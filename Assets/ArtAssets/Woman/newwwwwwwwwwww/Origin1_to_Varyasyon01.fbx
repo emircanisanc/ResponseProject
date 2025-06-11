@@ -1,0 +1,97 @@
+```fbx
+; FBX 7.4.0 project file
+; Created by ChatGPT ASCII Export
+FBXHeaderExtension:  {
+  FBXHeaderVersion: 1003
+  FBXVersion: 7400
+  CreationTimeStamp: {
+    Version: 1000
+    Year: 2025
+    Month: 6
+    Day: 11
+    Hour: 14
+    Minute: 37
+    Second: 12
+    Millisecond: 400
+  }
+  Creator: "ChatGPT ASCII FBX Generator"
+}
+GlobalSettings:  {
+  Version: 1000
+  Properties70:  {
+    P: "UpAxis", "int", "Integer", "",1
+    P: "UpAxisSign", "int", "Integer", "",1
+    P: "FrontAxis", "int", "Integer", "",2
+    P: "FrontAxisSign", "int", "Integer", "",1
+    P: "CoordAxis", "int", "Integer", "",0
+    P: "CoordAxisSign", "int", "Integer", "",1
+    P: "UnitScaleFactor", "double", "Number", "",1
+    P: "OriginalUnitScaleFactor", "double", "Number", "",1
+  }
+}
+Objects:  {
+  Model: 1, "Hips", "LimbNode" {
+    Properties70:  {
+      P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+    }
+  }
+  Model: 2, "Spine", "LimbNode" {
+    Properties70:  {
+      P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+    }
+  }
+  Model: 3, "LeftArm", "LimbNode" {
+    Properties70:  {
+      P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+    }
+  }
+  Model: 4, "RightArm", "LimbNode" {
+    Properties70:  {
+      P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+    }
+  }
+  Model: 5, "LeftLeg", "LimbNode" {
+    Properties70:  {
+      P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+    }
+  }
+  Model: 6, "RightLeg", "LimbNode" {
+    Properties70:  {
+      P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+    }
+  }
+}
+Connections:  {
+  C: "OO",1,0
+  C: "OO",2,1
+  C: "OO",3,1
+  C: "OO",4,1
+  C: "OO",5,1
+  C: "OO",6,1
+}
+Takes:  {
+  CurrentTake: "Anim_Origin1_to_Varyasyon01"
+  Take: "Anim_Origin1_to_Varyasyon01" {
+    FileName: "Origin1_to_Varyasyon01.fbx"
+    LocalTime: 0,480000
+    TimeSpanStart: 0
+    TimeSpanStop: 480000
+  }
+}
+AnimationStack: "Anim_Origin1_to_Varyasyon01", "" {
+  AnimationLayer: "BaseLayer" {
+    AnimationCurveNode: "Hips_Translation_X", "" {
+      KeyTime: *2 { a:0,192000 }
+      KeyValueFloat: *2 { a:0.0,10.0 }
+    }
+    AnimationCurveNode: "RightArm_Rotation_Z", "" {
+      KeyTime: *2 { a:0,192000 }
+      KeyValueFloat: *2 { a:0.0,45.0 }
+    }
+    AnimationCurveNode: "LeftArm_Rotation_Z", "" {
+      KeyTime: *2 { a:0,192000 }
+      KeyValueFloat: *2 { a:0.0,-45.0 }
+    }
+  }
+}
+```

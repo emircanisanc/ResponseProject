@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.Splines;
 
 public class PhaseObject : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PhaseObject : MonoBehaviour
     public AudioClip audioClip;
 
     private Animator animator;
+    public bool UseSpline = false;
     private AudioSource audioSource;
 
     [Header("PHASE 3 ANIMATIONS")]
@@ -25,6 +27,8 @@ public class PhaseObject : MonoBehaviour
         audioSource.clip = audioClip;
         audioSource.Play();
     }
+
+
 
     void Awake()
     {
@@ -48,6 +52,8 @@ public class PhaseObject : MonoBehaviour
         if (!isHint)
         {
             if (animator) animator.enabled = true;
+
+            if (UseSpline) GetComponent<SplineFollowerEmir>().FollowSpline();
 
 
 
@@ -127,6 +133,8 @@ public class PhaseObject : MonoBehaviour
             StopAnim();
 
             if (animator) animator.enabled = false;
+
+            if (UseSpline) GetComponent<SplineFollowerEmir>().ResetAndStop();
 
             if (!instant && isActiveNow)
             {
