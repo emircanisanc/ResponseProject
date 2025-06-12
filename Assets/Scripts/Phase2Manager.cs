@@ -117,8 +117,8 @@ public class Phase2Manager : PhaseSequencer
                 if (animatorActive) girl.GetComponentInChildren<Animator>().SetTrigger("LookWithBody" + sideAnim);
 
 
-                if (sideLeft) leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.PlayAnim();
-                if (!sideLeft) rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.PlayAnim();
+                if (!sideLeft) leftObjectsParent.GetChild(leftIndex).GetComponent<PhaseObject>()?.PlayAnim();
+                if (sideLeft) rightObjectsParent.GetChild(rightIndex).GetComponent<PhaseObject>()?.PlayAnim();
 
                 yield return new WaitForSeconds(objShowDuration);
 

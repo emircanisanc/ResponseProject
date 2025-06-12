@@ -1,0 +1,11 @@
+Model Information:
+* title:	a little astronaut on a rocket
+* source:	https://sketchfab.com/3d-models/a-little-astronaut-on-a-rocket-252525d62aa3447781b02b0b76dc8587
+* author:	papuga_lab (https://sketchfab.com/papuga_lab)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "a little astronaut on a rocket" (https://sketchfab.com/3d-models/a-little-astronaut-on-a-rocket-252525d62aa3447781b02b0b76dc8587) by papuga_lab (https://sketchfab.com/papuga_lab) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
