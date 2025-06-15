@@ -6,7 +6,7 @@ using UnityEngine.Splines;
 
 public class PhaseObject : MonoBehaviour
 {
-    public float targetScale = 1f;
+    public float targetScale = 0.66f;
 
     public const float DO_APPEAR_TIME = 1f;
     public const float DO_CLOSE_TIME = 0.7f;
